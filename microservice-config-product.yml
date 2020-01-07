@@ -6,7 +6,7 @@ server:
     port: 8001 
 mybatis: 
     config-location: classpath:mybatis/mybatis.cfg.xml 
-    type-aliases-package: com.mengxuegu.springcloud.entities 
+    type-aliases-package: com.springcloud.entities 
     mapper-locations: classpath:mybatis/mapper/**/*.xml 
 spring: 
     profiles: dev # 开发环境 
@@ -17,7 +17,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver 
         url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8 #数 据库连接地址，*****注意库名 db01*************** 
         username: root 
-        password: root 
+        password:  
         dbcp2: 
             min-idle: 5 
             initial-size: 5 
@@ -37,7 +37,7 @@ server:
     port: 8001 
 mybatis: 
     config-location: classpath:mybatis/mybatis.cfg.xml 
-    type-aliases-package: com.mengxuegu.springcloud.entities 
+    type-aliases-package: com.springcloud.entities 
     mapper-locations: classpath:mybatis/mapper/**/*.xml 
 spring: profiles: prod # 生产环境 
     application: 
@@ -47,7 +47,7 @@ spring: profiles: prod # 生产环境
         driver-class-name: com.mysql.cj.jdbc.Driver 
         url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8 #数 据库连接地址，*****注意库名 db02*************** 
         username: root 
-        password: root 
+        password:  
         dbcp2: 
             min-idle: 5 
             initial-size: 5 
