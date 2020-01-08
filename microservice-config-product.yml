@@ -39,7 +39,8 @@ mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml 
     type-aliases-package: com.springcloud.entities 
     mapper-locations: classpath:mybatis/mapper/**/*.xml 
-spring: profiles: prod # 生产环境 
+spring: 
+    profiles: prod
     application: 
         name: microservice-product-config
     datasource: 
