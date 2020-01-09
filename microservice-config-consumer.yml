@@ -1,14 +1,14 @@
 spring: 
-    profiles: 
-        active: dev # 激活开发环境配置 
+  profiles: 
+    active: dev # 激活开发环境配置 
 --- 
 server:
   port: 80
  
 spring:
-	profiles: dev # 生产环境 
+  profiles: dev # 生产环境 
   application:
-    name: microservice-zuul-gateway
+    name: microservice-cnsumer
 eureka:
   client:
     register-with-eureka: true
@@ -32,9 +32,9 @@ zuul:
 server: 
     port: 80 
 spring: 
-	profiles: prod # 生产环境 
+  profiles: prod # 生产环境 
   application: 
-		name: microservice-product-config
+    name: microservice-cnsumer
     
 eureka:
   client:
