@@ -29,8 +29,6 @@ zuul:
       path: /consumer/**
       serviceId: microservice-consumer
       stripPrefix: false
-      
-
 --- 
 server: 
   port: 7001 
