@@ -23,6 +23,7 @@ eureka:
 zuul:
   routes:
     microservice-cnsumer: /consumer/** 
+    stripPrefix: false
 
 --- 
 server: 
@@ -46,3 +47,4 @@ eureka:
 zuul:
   routes:
     microservice-cnsumer: /consumer/** 
+    stripPrefix: false
