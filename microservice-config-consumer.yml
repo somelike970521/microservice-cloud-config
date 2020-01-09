@@ -4,7 +4,6 @@ spring:
 --- 
 server:
   port: 80
- 
 spring:
   profiles: dev # 生产环境 
   application:
@@ -17,7 +16,6 @@ eureka:
       defaultZone: http://eureka6001.com:6001/eureka/
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
 feign:
   hystrix:
     enabled: true
@@ -27,8 +25,7 @@ server:
 spring: 
   profiles: prod # 生产环境 
   application: 
-    name: microservice-consumer
-    
+    name: microservice-consumer 
 eureka:
   client:
     register-with-eureka: true
@@ -37,8 +34,6 @@ eureka:
       defaultZone: http://eureka6001.com:6001/eureka/
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
-
 feign:
   hystrix:
     enabled: true
