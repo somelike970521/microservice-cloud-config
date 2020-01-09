@@ -11,7 +11,7 @@ mybatis:
 spring: 
     profiles: dev # 开发环境 
     application: 
-        name: microservice-product-config 
+        name: microservice-product-config-bus
     datasource: 
         type: com.alibaba.druid.pool.DruidDataSource 
         driver-class-name: com.mysql.cj.jdbc.Driver 
@@ -39,7 +39,8 @@ mybatis:
     config-location: classpath:mybatis/mybatis.cfg.xml 
     type-aliases-package: com.springcloud.entities 
     mapper-locations: classpath:mybatis/mapper/**/*.xml 
-spring: profiles: prod # 生产环境 
+spring: 
+    profiles: prod
     application: 
         name: microservice-product-config
     datasource: 
