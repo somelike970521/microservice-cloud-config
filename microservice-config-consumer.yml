@@ -1,0 +1,51 @@
+spring: 
+    profiles: 
+        active: dev # 激活开发环境配置 
+--- 
+server:
+  port: 80
+ 
+spring:
+	profiles: dev # 生产环境 
+  application:
+    name: microservice-zuul-gateway
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6001.com:6001/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+
+feign:
+  hystrix:
+    enabled: true
+
+
+zuul:
+  routes:
+  	microservice-product: /product/** 
+
+--- 
+server: 
+    port: 80 
+spring: 
+	profiles: prod # 生产环境 
+  application: 
+		name: microservice-product-config
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka6001.com:6001/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+
+feign:
+  hystrix:
+    enabled: true
