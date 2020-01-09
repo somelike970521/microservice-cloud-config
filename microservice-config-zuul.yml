@@ -22,8 +22,15 @@ eureka:
 
 zuul:
   routes:
-    microservice-cnsumer: /consumer/** 
-    stripPrefix: false
+    provider-product:
+      path: /product/**
+      serviceId: microservice-product
+      stripPrefix: false
+    cnsumer-product:
+      path: /cnsumer/**
+      serviceId: microservice-cnsumer
+      stripPrefix: false
+      
 
 --- 
 server: 
@@ -45,6 +52,13 @@ eureka:
 
 
 zuul:
-  routes:
-    microservice-cnsumer: /consumer/** 
-    stripPrefix: false
+  routes: 
+    provider-product:
+      path: /product/**
+      serviceId: microservice-product
+      stripPrefix: false
+    cnsumer-product:
+      path: /cnsumer/**
+      serviceId: microservice-cnsumer
+      stripPrefix: false
+      
