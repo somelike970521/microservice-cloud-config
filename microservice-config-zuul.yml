@@ -1,12 +1,12 @@
 spring: 
-    profiles: 
-        active: dev # 激活开发环境配置 
+  profiles: 
+    active: dev # 激活开发环境配置 
 --- 
 server:
   port: 7001
  
 spring:
-	profiles: dev # 生产环境 
+  profiles: dev # 生产环境 
   application:
     name: microservice-zuul-gateway
 eureka:
@@ -14,7 +14,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-    	defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka
   instance:
     prefer-ip-address:  true
     instanceId: ${spring.cloud.client.ip-address}:${server.port}
@@ -22,22 +22,22 @@ eureka:
 
 zuul:
   routes:
-  	microservice-product: /product/** 
+    microservice-product: /product/** 
 
 --- 
 server: 
-    port: 7001 
+  port: 7001 
 spring: 
-	profiles: prod # 生产环境 
+  profiles: prod # 生产环境 
   application: 
-		name: microservice-product-config
+    name: microservice-product-config
     
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-    	defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka
   instance:
     prefer-ip-address:  true
     instanceId: ${spring.cloud.client.ip-address}:${server.port}
@@ -45,4 +45,4 @@ eureka:
 
 zuul:
   routes:
-  	microservice-product: /product/** 
+    microservice-product: /product/** 
