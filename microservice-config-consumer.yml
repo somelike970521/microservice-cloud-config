@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev # 生产环境 
   application:
-    name: microservice-cnsumer
+    name: microservice-consumer
 eureka:
   client:
     register-with-eureka: true
@@ -27,7 +27,7 @@ server:
 spring: 
   profiles: prod # 生产环境 
   application: 
-    name: microservice-cnsumer
+    name: microservice-consumer
     
 eureka:
   client:
