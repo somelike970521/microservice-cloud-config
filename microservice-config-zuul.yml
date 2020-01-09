@@ -22,7 +22,7 @@ eureka:
 
 zuul:
   routes:
-    microservice-product: /product/** 
+    microservice-cnsumer: /consumer/** 
 
 --- 
 server: 
@@ -45,4 +45,4 @@ eureka:
 
 zuul:
   routes:
-    microservice-product: /product/** 
+    microservice-cnsumer: /consumer/** 
