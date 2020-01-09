@@ -7,8 +7,7 @@ server:
  
 spring:
   profiles: dev # 生产环境 
-  application:
-    name: microservice-zuul-gateway
+
 eureka:
   client:
     registerWithEureka: true
@@ -24,11 +23,11 @@ zuul:
   routes:
     provider-product:
       path: /product/**
-      serviceId: microservice-product
+      serviceId: microservice-product-config
       stripPrefix: false
-    cnsumer-product:
-      path: /cnsumer/**
-      serviceId: microservice-cnsumer
+    consumer-product:
+      path: /consumer/**
+      serviceId: microservice-consumer
       stripPrefix: false
       
 
@@ -37,8 +36,7 @@ server:
   port: 7001 
 spring: 
   profiles: prod # 生产环境 
-  application: 
-    name: microservice-product-config
+
     
 eureka:
   client:
@@ -55,10 +53,10 @@ zuul:
   routes: 
     provider-product:
       path: /product/**
-      serviceId: microservice-product
+      serviceId: microservice-product-config
       stripPrefix: false
-    cnsumer-product:
-      path: /cnsumer/**
-      serviceId: microservice-cnsumer
+    consumer-product:
+      path: /consumer/**
+      serviceId: microservice-consumer
       stripPrefix: false
       
