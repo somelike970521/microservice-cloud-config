@@ -13,7 +13,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com/eureka
   instance:
     prefer-ip-address:  true
     instanceId: ${spring.cloud.client.ip-address}:${server.port}
@@ -41,7 +41,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com/eureka
   instance:
     prefer-ip-address:  true
     instanceId: ${spring.cloud.client.ip-address}:${server.port}

@@ -13,9 +13,9 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka6001.com:6001/eureka/
+      defaultZone: http://eureka6001.com:6001/eureka/,http://eureka6002.com/eureka
   instance:
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}-dev
 feign:
   hystrix:
     enabled: true
@@ -31,9 +31,9 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka6001.com:6001/eureka/
+      defaultZone: http://eureka6001.com:6001/eureka/,http://eureka6002.com/eureka
   instance:
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}-prod
 feign:
   hystrix:
     enabled: true
