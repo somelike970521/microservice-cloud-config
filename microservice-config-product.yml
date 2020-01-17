@@ -1,7 +1,6 @@
 spring: 
     profiles: 
         active: dev # 激活开发环境配置
-    asdas: 123
 --- 
 server: 
     port: 8001 
@@ -31,13 +30,9 @@ eureka:
         serviceUrl: 
             defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com/eureka
     instance: 
-        instanceId: ${spring.application.name}:${server.port} 
+        instanceId: ${spring.application.name}:${server.port}-bus
         prefer-ip-address: true 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
 --- 
 server: 
     port: 8001 
@@ -69,8 +64,4 @@ eureka:
     instance: 
         instanceId: ${spring.application.name}:${server.port} 
         prefer-ip-address: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+
