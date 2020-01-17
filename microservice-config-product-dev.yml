@@ -1,3 +1,5 @@
+emp:
+    name: 汤姆憨克斯
 server: 
     port: 8001 
 mybatis: 
